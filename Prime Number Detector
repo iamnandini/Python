@@ -1,0 +1,19 @@
+n=0
+while n==0:
+  def prime_detector (Number):
+    if (Number==1 or Number ==2):
+      print ("Given Number is Prime.")
+    else:
+      flag =0
+      z= int ((Number/2)+1)
+      for x in range (2,z):
+        if Number%x==0:
+          flag=1
+    
+      if flag==1:
+        print ("The Given Number is not Prime. ")
+      else :
+        print ("The Given Number is Prime. ")
+  
+  Number = int (input ("Enter the Number:"))
+  prime_detector(Number)
