@@ -1,0 +1,30 @@
+from art import logo
+print(logo)
+
+bidding = {}
+loop_c = True
+def comparison(bidding_new):
+  winner=""
+  Winner_bid=0
+
+  for bidder in bidding_new :
+    number=bidding_new [bidder]
+    number = int (number)
+    
+    if number > Winner_bid:
+      Winner_bid= number 
+      winner = bidder 
+  print (f"The winner is {winner} with bidding of ${Winner_bid}.")
+    
+
+while loop_c== True:
+  
+  Name= input("Enter Your Name: ")
+  Bid = input ("Enter your bidding amount: $")
+  bidding [Name] = Bid
+  loop_s = input ("Do you want to continue? type (y/n)")
+
+  if loop_s == "n":
+    loop_c = False
+    comparison(bidding_new=bidding)
+  
